@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Summary</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="page1.html">Page 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active">Page 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page3.html">Page 3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page4.html">Page 4</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page5.html">Page 5</a> 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h1 class="mb-4">Rangkuman "JavaScript Tutorial"</h1>
+
+
+
+  <!-- Link ke JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+  <div class="container mt-4">
+    <h1 class="text-center text-primary mb-4">JavaScript Summary</h1>
+
+    <h2>1. JavaScript Objects</h2>
+    <p>Objects are collections of properties (key-value pairs) and methods.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 30,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+console.log(person.fullName()); // Output: John Doe
+    </pre>
+
+    <h2>2. JS Object Properties</h2>
+    <p>Access object properties using dot notation or bracket notation.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const car = { brand: "Toyota", model: "Corolla", year: 2020 };
+
+console.log(car.brand);      // Output: Toyota
+console.log(car["model"]);   // Output: Corolla
+    </pre>
+
+    <h2>3. JS Object Methods</h2>
+    <p>Methods are functions stored as object properties.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const calculator = {
+  add: function(a, b) {
+    return a + b;
+  },
+  subtract: function(a, b) {
+    return a - b;
+  }
+};
+
+console.log(calculator.add(5, 3));       // Output: 8
+console.log(calculator.subtract(5, 3)); // Output: 2
+    </pre>
+
+    <h2>4. JS Object Display</h2>
+    <p>Objects can be displayed using <code>console.log</code> or <code>JSON.stringify</code>.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const user = { name: "Alice", age: 25 };
+console.log(user);                     // Output: { name: 'Alice', age: 25 }
+console.log(JSON.stringify(user));     // Output: {"name":"Alice","age":25}
+    </pre>
+
+    <h2>5. JS Object Constructors</h2>
+    <p>Constructors are templates for creating objects.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.fullName = function() {
+    return this.firstName + " " + this.lastName;
+  };
+}
+
+const person1 = new Person("John", "Doe");
+console.log(person1.fullName()); // Output: John Doe
+    </pre>
+
+    <h2>6. JS Events</h2>
+    <p>Events are actions or occurrences (e.g., clicks, hovers).</p>
+    <pre class="bg-dark text-white p-3 rounded">
+&lt;button onclick="alert('Button clicked!')"&gt;Click Me&lt;/button&gt;
+    </pre>
+
+    <h2>7. JS Strings</h2>
+    <p>Strings are text enclosed in quotes.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const message = "Hello, World!";
+console.log(message.length); // Output: 13
+    </pre>
+
+    <h2>8. JS String Methods</h2>
+    <p>String methods include <code>toUpperCase()</code> and <code>slice()</code>.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const text = "JavaScript";
+console.log(text.toUpperCase()); // Output: JAVASCRIPT
+console.log(text.slice(0, 4));   // Output: Java
+    </pre>
+
+    <h2>9. JS String Search</h2>
+    <p>Search strings using <code>indexOf()</code> or <code>includes()</code>.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const text = "Learn JavaScript";
+console.log(text.indexOf("Java"));    // Output: 6
+console.log(text.includes("Python")); // Output: false
+    </pre>
+
+    <h2>10. JS String Templates</h2>
+    <p>Use template literals with backticks for string interpolation.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const name = "Alice";
+const message = `Hello, ${name}!`;
+console.log(message); // Output: Hello, Alice!
+    </pre>
+
+    <h2>11. JS Numbers</h2>
+    <p>Numbers are used for integers and floating-point values.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const num = 42;
+const pi = 3.14159;
+console.log(num, pi);
+    </pre>
+
+    <h2>12. JS BigInt</h2>
+    <p>BigInt is used for very large numbers.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const bigNumber = 123456789012345678901234567890n;
+console.log(bigNumber); // Output: 123456789012345678901234567890n
+    </pre>
+
+    <h2>13. JS Number Methods</h2>
+    <p>Examples: <code>toFixed()</code>, <code>toString()</code>.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const num = 123.456;
+console.log(num.toFixed(2)); // Output: 123.46
+console.log(num.toString()); // Output: "123.456"
+    </pre>
+
+    <h2>14. JS Number Properties</h2>
+    <p>Examples: <code>Number.MAX_VALUE</code>, <code>Number.MIN_VALUE</code>.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e+308
+console.log(Number.MIN_VALUE); // Output: 5e-324
+    </pre>
+
+    <h2>15. JS Arrays</h2>
+    <p>Arrays are collections of elements in a single variable.</p>
+    <pre class="bg-dark text-white p-3 rounded">
+const fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits[0]); // Output: Apple
+
+fruits.push("Orange");
+console.log(fruits); // Output: ["Apple", "Banana", "Cherry", "Orange"]
+
+fruits.pop();
+console.log(fruits); // Output: ["Apple", "Banana", "Cherry"]
+    </pre>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
