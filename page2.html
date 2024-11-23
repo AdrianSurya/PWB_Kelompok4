@@ -1,14 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Summary</title>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Summary</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: #2c3e50;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #1abc9c;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        code {
+            background-color: #ecf0f1;
+            color: #e74c3c;
+            padding: 3px 5px;
+            border-radius: 5px;
+            font-size: 0.95em;
+        }
+
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            overflow-x: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #16a085;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            background-color: #34495e;
+            color: white;
+        }
+    </style>
 </head>
-<body class="bg-light">
-    <!DOCTYPE html>
+<body>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -24,9 +102,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">About</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="page1.html">Page 1</a>
           </li>
@@ -47,154 +122,189 @@
     </div>
   </nav>
 
-  <div class="container mt-4">
-    <h1 class="text-center text-primary mb-4">JavaScript Summary</h1>
+  <div class="container my-5">
 
-    <h2>1. JavaScript Objects</h2>
-    <p>Objects are collections of properties (key-value pairs) and methods.</p>
-    <pre class="bg-dark text-white p-3 rounded">
+  <!-- Link ke JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+    <h1>JavaScript Summary</h1>
+    <div class="container">
+        <div class="card">
+            <h2>1. JS Objects</h2>
+            <p>JavaScript objects adalah koleksi dari properti yang terkait dengan nilai.</p>
+            <pre>
 const person = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 30,
-  fullName: function() {
-    return this.firstName + " " + this.lastName;
-  }
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
 };
 
 console.log(person.fullName()); // Output: John Doe
-    </pre>
+            </pre>
+        </div>
 
-    <h2>2. JS Object Properties</h2>
-    <p>Access object properties using dot notation or bracket notation.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const car = { brand: "Toyota", model: "Corolla", year: 2020 };
-
-console.log(car.brand);      // Output: Toyota
-console.log(car["model"]);   // Output: Corolla
-    </pre>
-
-    <h2>3. JS Object Methods</h2>
-    <p>Methods are functions stored as object properties.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const calculator = {
-  add: function(a, b) {
-    return a + b;
-  },
-  subtract: function(a, b) {
-    return a - b;
-  }
+        <div class="card">
+            <h2>2. JS Object Properties</h2>
+            <p>Properti objek adalah pasangan <code>key-value</code>. Properti dapat diakses menggunakan notasi titik atau tanda kurung siku.</p>
+            <pre>
+const car = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2020
 };
 
-console.log(calculator.add(5, 3));       // Output: 8
+console.log(car.brand);  // Output: Toyota
+console.log(car["model"]); // Output: Corolla
+            </pre>
+        </div>
+
+        <div class="card">
+            <h2>3. JS Object Methods</h2>
+            <p>Metode adalah fungsi yang disimpan sebagai properti objek.</p>
+            <pre>
+const calculator = {
+    add: function(a, b) {
+        return a + b;
+    },
+    subtract: function(a, b) {
+        return a - b;
+    }
+};
+
+console.log(calculator.add(5, 3)); // Output: 8
 console.log(calculator.subtract(5, 3)); // Output: 2
-    </pre>
+            </pre>
+        </div>
 
-    <h2>4. JS Object Display</h2>
-    <p>Objects can be displayed using <code>console.log</code> or <code>JSON.stringify</code>.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const user = { name: "Alice", age: 25 };
-console.log(user);                     // Output: { name: 'Alice', age: 25 }
-console.log(JSON.stringify(user));     // Output: {"name":"Alice","age":25}
-    </pre>
+        <div class="card">
+            <h2>4. JS Object Display</h2>
+            <p>Objek dapat ditampilkan dengan berbagai cara seperti <code>console.log</code> atau <code>JSON.stringify</code>.</p>
+            <pre>
+const book = {
+    title: "JavaScript Basics",
+    author: "Jane Doe",
+    year: 2021
+};
 
-    <h2>5. JS Object Constructors</h2>
-    <p>Constructors are templates for creating objects.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.fullName = function() {
-    return this.firstName + " " + this.lastName;
-  };
+console.log(book); // Output: {title: "JavaScript Basics", author: "Jane Doe", year: 2021}
+console.log(JSON.stringify(book)); // Output: {"title":"JavaScript Basics","author":"Jane Doe","year":2021}
+            </pre>
+        </div>
+
+        <div class="card">
+            <h2>5. JS Object Constructors</h2>
+            <p>Constructor digunakan untuk membuat objek dengan properti yang sama menggunakan fungsi khusus.</p>
+            <pre>
+function Person(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
 }
 
-const person1 = new Person("John", "Doe");
-console.log(person1.fullName()); // Output: John Doe
-    </pre>
+const person1 = new Person("Alice", "Smith", 25);
+console.log(person1.firstName); // Output: Alice
+            </pre>
+        </div>
 
-    <h2>6. JS Events</h2>
-    <p>Events are actions or occurrences (e.g., clicks, hovers).</p>
-    <pre class="bg-dark text-white p-3 rounded">
-&lt;button onclick="alert('Button clicked!')"&gt;Click Me&lt;/button&gt;
-    </pre>
+        <div class="card">
+            <h2>6. JS Events</h2>
+            <p>Event di JavaScript adalah tindakan atau kejadian yang terjadi di halaman web.</p>
+            <pre>
+<button onclick="alert('Button clicked!')">Click Me</button>
+            </pre>
+        </div>
 
-    <h2>7. JS Strings</h2>
-    <p>Strings are text enclosed in quotes.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const message = "Hello, World!";
-console.log(message.length); // Output: 13
-    </pre>
+        <div class="card">
+            <h2>7. JS Strings</h2>
+            <p>String adalah urutan karakter yang didefinisikan di dalam tanda kutip.</p>
+            <pre>
+let greeting = "Hello, World!";
+console.log(greeting); // Output: Hello, World!
+            </pre>
+        </div>
 
-    <h2>8. JS String Methods</h2>
-    <p>String methods include <code>toUpperCase()</code> and <code>slice()</code>.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const text = "JavaScript";
+        <div class="card">
+            <h2>8. JS String Methods</h2>
+            <p>JavaScript menyediakan berbagai metode untuk memanipulasi string seperti <code>length</code>, <code>toUpperCase()</code>, dan <code>substring()</code>.</p>
+            <pre>
+let text = "JavaScript";
+console.log(text.length); // Output: 10
 console.log(text.toUpperCase()); // Output: JAVASCRIPT
-console.log(text.slice(0, 4));   // Output: Java
-    </pre>
+console.log(text.substring(0, 4)); // Output: Java
+            </pre>
+        </div>
 
-    <h2>9. JS String Search</h2>
-    <p>Search strings using <code>indexOf()</code> or <code>includes()</code>.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const text = "Learn JavaScript";
-console.log(text.indexOf("Java"));    // Output: 6
-console.log(text.includes("Python")); // Output: false
-    </pre>
+        <div class="card">
+            <h2>9. JS String Search</h2>
+            <p>String dapat dicari menggunakan metode seperti <code>indexOf()</code> atau <code>includes()</code>.</p>
+            <pre>
+let sentence = "Learning JavaScript is fun!";
+console.log(sentence.indexOf("JavaScript")); // Output: 9
+console.log(sentence.includes("fun")); // Output: true
+            </pre>
+        </div>
 
-    <h2>10. JS String Templates</h2>
-    <p>Use template literals with backticks for string interpolation.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const name = "Alice";
-const message = `Hello, ${name}!`;
-console.log(message); // Output: Hello, Alice!
-    </pre>
+        <div class="card">
+            <h2>10. JS String Templates</h2>
+            <p>String templates menggunakan backticks (<code>`</code>) untuk menyisipkan ekspresi menggunakan <code>${}</code>.</p>
+            <pre>
+let name = "John";
+let age = 30;
+console.log(`My name is ${name} and I am ${age} years old.`);
+// Output: My name is John and I am 30 years old.
+            </pre>
+        </div>
 
-    <h2>11. JS Numbers</h2>
-    <p>Numbers are used for integers and floating-point values.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const num = 42;
-const pi = 3.14159;
-console.log(num, pi);
-    </pre>
+        <div class="card">
+            <h2>11. JS Numbers</h2>
+            <p>Angka di JavaScript adalah tipe data yang digunakan untuk operasi matematika.</p>
+            <pre>
+let num = 42;
+console.log(num + 8); // Output: 50
+            </pre>
+        </div>
 
-    <h2>12. JS BigInt</h2>
-    <p>BigInt is used for very large numbers.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const bigNumber = 123456789012345678901234567890n;
+        <div class="card">
+            <h2>12. JS BigInt</h2>
+            <p><code>BigInt</code> digunakan untuk angka yang sangat besar melebihi batas <code>Number</code>.</p>
+            <pre>
+let bigNumber = BigInt("123456789012345678901234567890");
 console.log(bigNumber); // Output: 123456789012345678901234567890n
-    </pre>
+            </pre>
+        </div>
 
-    <h2>13. JS Number Methods</h2>
-    <p>Examples: <code>toFixed()</code>, <code>toString()</code>.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const num = 123.456;
-console.log(num.toFixed(2)); // Output: 123.46
-console.log(num.toString()); // Output: "123.456"
-    </pre>
+        <div class="card">
+            <h2>13. JS Number Methods</h2>
+            <p>Metode seperti <code>toString()</code> dan <code>toFixed()</code> digunakan untuk memanipulasi angka.</p>
+            <pre>
+let num = 3.14159;
+console.log(num.toFixed(2)); // Output: 3.14
+            </pre>
+        </div>
 
-    <h2>14. JS Number Properties</h2>
-    <p>Examples: <code>Number.MAX_VALUE</code>, <code>Number.MIN_VALUE</code>.</p>
-    <pre class="bg-dark text-white p-3 rounded">
+        <div class="card">
+            <h2>14. JS Number Properties</h2>
+            <p>Properti seperti <code>MAX_VALUE</code> dan <code>MIN_VALUE</code> memberikan informasi tentang batas angka di JavaScript.</p>
+            <pre>
 console.log(Number.MAX_VALUE); // Output: 1.7976931348623157e+308
 console.log(Number.MIN_VALUE); // Output: 5e-324
-    </pre>
+            </pre>
+        </div>
 
-    <h2>15. JS Arrays</h2>
-    <p>Arrays are collections of elements in a single variable.</p>
-    <pre class="bg-dark text-white p-3 rounded">
-const fruits = ["Apple", "Banana", "Cherry"];
-console.log(fruits[0]); // Output: Apple
-
-fruits.push("Orange");
-console.log(fruits); // Output: ["Apple", "Banana", "Cherry", "Orange"]
-
-fruits.pop();
-console.log(fruits); // Output: ["Apple", "Banana", "Cherry"]
-    </pre>
-  </div>
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="card">
+            <h2>15. JS Arrays</h2>
+            <p>Array di JavaScript adalah struktur data yang dapat menyimpan banyak nilai dalam satu variabel.</p>
+            <pre>
+let colors = ["red", "blue", "green"];
+console.log(colors[0]); // Output: red
+console.log(colors.length); // Output: 3
+            </pre>
+        </div>
+    </div>
 </body>
 </html>
