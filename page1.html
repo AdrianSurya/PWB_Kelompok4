@@ -37,90 +37,189 @@
     </div>
   </nav>
 
-  <div class="container my-5">
-    <h1 class="mb-4">Rangkuman "JavaScript Tutorial"</h1>
-        <section class="mb-5">
-          <h2>1. JavaScript Output</h2>
-          <button class="btn btn-primary" onclick="showAlert()">Show Alert</button>
-          <div class="mt-3">
-            <p id="output">Click the button to see a message here.</p>
-            <button class="btn btn-secondary" onclick="updateOutput()">Update Text</button>
-          </div>
-        </section>
-    
-        <!-- Example 2: JS Variables -->
-        <section class="mb-5">
-          <h2>2. JavaScript Variables</h2>
-          <button class="btn btn-success" onclick="showVariables()">Show Variables</button>
-          <p id="variablesResult" class="mt-3"></p>
-        </section>
-    
-        <!-- Example 3: JS Functions -->
-        <section class="mb-5">
-          <h2>3. JavaScript Functions</h2>
-          <label for="nameInput" class="form-label">Enter your name:</label>
-          <input type="text" id="nameInput" class="form-control" placeholder="Your Name">
-          <button class="btn btn-info mt-2" onclick="greetUser()">Greet Me</button>
-          <p id="greeting" class="mt-3"></p>
-        </section>
-    
-        <!-- Example 4: JS Operators -->
-        <section class="mb-5">
-          <h2>4. JavaScript Operators</h2>
-          <label for="num1" class="form-label">Number 1:</label>
-          <input type="number" id="num1" class="form-control" placeholder="Enter first number">
-          <label for="num2" class="form-label mt-2">Number 2:</label>
-          <input type="number" id="num2" class="form-control" placeholder="Enter second number">
-          <button class="btn btn-warning mt-3" onclick="calculateSum()">Calculate Sum</button>
-          <p id="sumResult" class="mt-3"></p>
-        </section>
-      </div>
-    
-      <!-- Bootstrap JS -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-      <!-- JavaScript Code -->
-      <script>
-        // Example 1: JavaScript Output
-        function showAlert() {
-          alert("This is an alert message!");
-        }
-        function updateOutput() {
-          document.getElementById("output").innerHTML = "The output text has been updated using JavaScript!";
-        }
-    
-        // Example 2: JavaScript Variables
-        function showVariables() {
-          let name = "John";
-          let age = 25;
-          const country = "USA";
-          document.getElementById("variablesResult").innerHTML = Name: ${name}, Age: ${age}, Country: ${country};
-        }
-    
-        // Example 3: JavaScript Functions
-        function greetUser() {
-          const name = document.getElementById("nameInput").value;
-          if (name) {
-            document.getElementById("greeting").innerHTML = Hello, ${name}! Welcome!;
-          } else {
-            document.getElementById("greeting").innerHTML = "Please enter your name.";
-          }
-        }
-    
-        // Example 4: JavaScript Operators
-        function calculateSum() {
-          const num1 = parseFloat(document.getElementById("num1").value);
-          const num2 = parseFloat(document.getElementById("num2").value);
-          if (!isNaN(num1) && !isNaN(num2)) {
-            document.getElementById("sumResult").innerHTML = The sum is: ${num1 + num2};
-          } else {
-            document.getElementById("sumResult").innerHTML = "Please enter valid numbers.";
-          }
-        }
-      </script>
-    </body>
-    </html>
+<div class="container mt-5">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <h1 class="text-center mb-4">JavaScript Basics</h1>
+
+    <!-- JS Introduction Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Introduction</h4>
+        </div>
+        <div class="card-body">
+            <p>JavaScript is a versatile language used for web development. It allows you to add interactivity to websites, and is one of the core technologies alongside HTML and CSS.</p>
+            <pre><code>console.log("Hello, World!");</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Where To Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Where To Write Code</h4>
+        </div>
+        <div class="card-body">
+            <p>You can write JavaScript code in an HTML file using the <code>&lt;script&gt;</code> tag, either inline or in an external file.</p>
+            <pre><code>&lt;script&gt;
+alert("Hello from JavaScript!");
+&lt;/script&gt;</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Output Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Output</h4>
+        </div>
+        <div class="card-body">
+            <p>You can display output in JavaScript using <code>console.log()</code>, <code>alert()</code>, or <code>document.write()</code>.</p>
+            <pre><code>console.log("Output in console");
+alert("Output in alert box");</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Statements Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Statements</h4>
+        </div>
+        <div class="card-body">
+            <p>JavaScript statements perform an action. Statements end with a semicolon.</p>
+            <pre><code>let x = 10; // Assignment statement</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Syntax Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Syntax</h4>
+        </div>
+        <div class="card-body">
+            <p>JavaScript syntax defines the rules for writing JavaScript code, such as variable declarations and operators.</p>
+            <pre><code>var name = "John";</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Comments Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Comments</h4>
+        </div>
+        <div class="card-body">
+            <p>Comments are used to explain code. JavaScript supports single-line and multi-line comments.</p>
+            <pre><code>// Single-line comment
+/* Multi-line
+   comment */</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Variables Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Variables</h4>
+        </div>
+        <div class="card-body">
+            <p>Variables are used to store data in JavaScript. You can declare variables using <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+            <pre><code>let name = "Alice";</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Let Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Let</h4>
+        </div>
+        <div class="card-body">
+            <p>The <code>let</code> keyword is used to declare block-scoped variables.</p>
+            <pre><code>let greeting = "Hello, World!";
+if (true) {
+    let greeting = "Hi, there!";
+    console.log(greeting); // "Hi, there!"
+}
+console.log(greeting); // "Hello, World!"</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Const Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Const</h4>
+        </div>
+        <div class="card-body">
+            <p>The <code>const</code> keyword is used to declare constants whose values cannot be reassigned.</p>
+            <pre><code>const pi = 3.14;
+// pi = 3.14159; // Error: Assignment to constant variable</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Operators Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Operators</h4>
+        </div>
+        <div class="card-body">
+            <p>JavaScript includes various operators for performing calculations, comparisons, and logical operations.</p>
+            <pre><code>let x = 5;
+let y = 10;
+let sum = x + y; // Arithmetic operator</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Arithmetic Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Arithmetic</h4>
+        </div>
+        <div class="card-body">
+            <p>Arithmetic operators in JavaScript include <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, and <code>%</code>.</p>
+            <pre><code>let sum = 10 + 5; // 15
+let difference = 10 - 5; // 5</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Assignment Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Assignment</h4>
+        </div>
+        <div class="card-body">
+            <p>Assignment operators assign values to variables, such as <code>=</code>, <code>+=</code>, <code>-=</code>, etc.</p>
+            <pre><code>let x = 5;
+x += 3; // x = x + 3 -> x = 8</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Data Types Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Data Types</h4>
+        </div>
+        <div class="card-body">
+            <p>JavaScript supports various data types like <code>String</code>, <code>Number</code>, <code>Boolean</code>, <code>Object</code>, <code>Array</code>, <code>Null</code>, and <code>Undefined</code>.</p>
+            <pre><code>let name = "John"; // String
+let age = 30; // Number</code></pre>
+        </div>
+    </div>
+
+    <!-- JS Functions Section -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>JS Functions</h4>
+        </div>
+        <div class="card-body">
+            <p>Functions in JavaScript allow you to group reusable code together and call it when needed.</p>
+            <pre><code>function greet(name) {
+    return "Hello, " + name + "!";
+}
+console.log(greet("Alice")); // "Hello, Alice!"</code></pre>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
