@@ -15,6 +15,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
+            <a class="nav-link" href="index.html">About</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active">Page 1</a>
           </li>
           <li class="nav-item">
@@ -36,93 +39,88 @@
 
   <div class="container my-5">
     <h1 class="mb-4">Rangkuman "JavaScript Tutorial"</h1>
-
-
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>JavaScript Examples</title>
-    </head>
-    <body>
-      <h1>JavaScript Examples</h1>
+        <section class="mb-5">
+          <h2>1. JavaScript Output</h2>
+          <button class="btn btn-primary" onclick="showAlert()">Show Alert</button>
+          <div class="mt-3">
+            <p id="output">Click the button to see a message here.</p>
+            <button class="btn btn-secondary" onclick="updateOutput()">Update Text</button>
+          </div>
+        </section>
     
-      <h2>JS Introduction</h2>
-      <button onclick="introFunction()">Click me</button>
-      <p id="introOutput"></p>
+        <!-- Example 2: JS Variables -->
+        <section class="mb-5">
+          <h2>2. JavaScript Variables</h2>
+          <button class="btn btn-success" onclick="showVariables()">Show Variables</button>
+          <p id="variablesResult" class="mt-3"></p>
+        </section>
     
-      <h2>JS Output</h2>
-      <p id="outputDemo"></p>
+        <!-- Example 3: JS Functions -->
+        <section class="mb-5">
+          <h2>3. JavaScript Functions</h2>
+          <label for="nameInput" class="form-label">Enter your name:</label>
+          <input type="text" id="nameInput" class="form-control" placeholder="Your Name">
+          <button class="btn btn-info mt-2" onclick="greetUser()">Greet Me</button>
+          <p id="greeting" class="mt-3"></p>
+        </section>
+    
+        <!-- Example 4: JS Operators -->
+        <section class="mb-5">
+          <h2>4. JavaScript Operators</h2>
+          <label for="num1" class="form-label">Number 1:</label>
+          <input type="number" id="num1" class="form-control" placeholder="Enter first number">
+          <label for="num2" class="form-label mt-2">Number 2:</label>
+          <input type="number" id="num2" class="form-control" placeholder="Enter second number">
+          <button class="btn btn-warning mt-3" onclick="calculateSum()">Calculate Sum</button>
+          <p id="sumResult" class="mt-3"></p>
+        </section>
+      </div>
+    
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+      <!-- JavaScript Code -->
       <script>
-        document.getElementById("outputDemo").innerHTML = "This is JS Output using innerHTML.";
-        console.log("Output using console.log");
-      </script>
-    
-      <h2>JS Variables, Let, and Const</h2>
-      <p id="variablesDemo"></p>
-      <script>
-        var a = 5;
-        let b = 10;
-        const c = 15;
-        document.getElementById("variablesDemo").innerHTML = Var: ${a}, Let: ${b}, Const: ${c};
-      </script>
-    
-      <h2>JS Operators</h2>
-      <p id="operatorsDemo"></p>
-      <script>
-        let x = 10, y = 5;
-        document.getElementById("operatorsDemo").innerHTML = Addition: ${x + y}, Multiplication: ${x * y};
-      </script>
-    
-      <h2>JS Arithmetic</h2>
-      <p id="arithmeticDemo"></p>
-      <script>
-        let num1 = 20, num2 = 6;
-        document.getElementById("arithmeticDemo").innerHTML = `
-          Addition: ${num1 + num2}, Subtraction: ${num1 - num2}, 
-          Multiplication: ${num1 * num2}, Division: ${num1 / num2}, Modulus: ${num1 % num2}`;
-      </script>
-    
-      <h2>JS Assignment</h2>
-      <p id="assignmentDemo"></p>
-      <script>
-        let z = 10;
-        z += 5;
-        document.getElementById("assignmentDemo").innerHTML = Assignment result: ${z};
-      </script>
-    
-      <h2>JS Data Types</h2>
-      <p id="dataTypesDemo"></p>
-      <script>
-        let num = 42;
-        let str = "Hello World";
-        let bool = true;
-        let obj = {name: "John", age: 30};
-        let arr = [1, 2, 3];
-        document.getElementById("dataTypesDemo").innerHTML = `
-          Number: ${num}, String: "${str}", Boolean: ${bool}, 
-          Object: ${JSON.stringify(obj)}, Array: ${arr}`;
-      </script>
-    
-      <h2>JS Functions</h2>
-      <button onclick="showGreeting('John')">Click for Greeting</button>
-      <p id="functionDemo"></p>
-      <script>
-        function showGreeting(name) {
-          document.getElementById("functionDemo").innerHTML = Hello, ${name}!;
+        // Example 1: JavaScript Output
+        function showAlert() {
+          alert("This is an alert message!");
         }
-      </script>
+        function updateOutput() {
+          document.getElementById("output").innerHTML = "The output text has been updated using JavaScript!";
+        }
     
-      <script>
+        // Example 2: JavaScript Variables
+        function showVariables() {
+          let name = "John";
+          let age = 25;
+          const country = "USA";
+          document.getElementById("variablesResult").innerHTML = Name: ${name}, Age: ${age}, Country: ${country};
+        }
     
+        // Example 3: JavaScript Functions
+        function greetUser() {
+          const name = document.getElementById("nameInput").value;
+          if (name) {
+            document.getElementById("greeting").innerHTML = Hello, ${name}! Welcome!;
+          } else {
+            document.getElementById("greeting").innerHTML = "Please enter your name.";
+          }
+        }
     
-        function introFunction() {
-          document.getElementById("introOutput").innerHTML = "Hello, JavaScript!";
+        // Example 4: JavaScript Operators
+        function calculateSum() {
+          const num1 = parseFloat(document.getElementById("num1").value);
+          const num2 = parseFloat(document.getElementById("num2").value);
+          if (!isNaN(num1) && !isNaN(num2)) {
+            document.getElementById("sumResult").innerHTML = The sum is: ${num1 + num2};
+          } else {
+            document.getElementById("sumResult").innerHTML = "Please enter valid numbers.";
+          }
         }
       </script>
     </body>
     </html>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
