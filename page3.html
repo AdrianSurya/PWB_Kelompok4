@@ -38,7 +38,300 @@
   </nav>
 
   <div class="container my-5">
-    <h1 class="mb-4">Rangkuman "JavaScript Tutorial"</h1>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">JavaScript Methods and Concepts</h1>
+
+      <div class="accordion" id="accordionExample">
+     
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      JS Arrays Methods
+                  </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><strong>push()</strong> - Adds one or more elements to the end of an array.</li>
+                          <li><strong>pop()</strong> - Removes the last element from an array.</li>
+                          <li><strong>shift()</strong> - Removes the first element from an array.</li>
+                          <li><strong>unshift()</strong> - Adds one or more elements to the beginning of an array.</li>
+                          <li><strong>concat()</strong> - Merges two or more arrays into one.</li>
+                          <li><strong>join()</strong> - Joins all elements of an array into a string.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+ 
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      JS Arrays Search
+                  </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><strong>indexOf()</strong> - Returns the first index of a given element in an array.</li>
+                          <li><strong>lastIndexOf()</strong> - Returns the last index of a given element in an array.</li>
+                          <li><strong>includes()</strong> - Checks if an array contains a specific element.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+   
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      JS Array Sort
+                  </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><strong>sort()</strong> - Sorts the elements of an array in place.</li>
+                          <li><strong>reverse()</strong> - Reverses the order of the elements in an array.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+   
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      JS Array Iteration
+                  </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><strong>forEach()</strong> - Executes a provided function once for each array element.</li>
+                          <li><strong>map()</strong> - Creates a new array with the results of calling a function for every array element.</li>
+                          <li><strong>filter()</strong> - Creates a new array with all elements that pass the test implemented by the provided function.</li>
+                          <li><strong>reduce()</strong> - Applies a function against an accumulator and each element to reduce it to a single value.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+    
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      JS Array Const
+                  </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <p>In JavaScript, arrays declared with <strong>const</strong> cannot be reassigned, but the elements within the array can be modified.</p>
+                  </div>
+              </div>
+          </div>
+
+    
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                      JS Dates
+                  </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><strong>new Date()</strong> - Returns the current date and time.</li>
+                          <li><strong>Date.now()</strong> - Returns the number of milliseconds elapsed since January 1, 1970.</li>
+                          <li><strong>new Date(milliseconds)</strong> - Returns a date object from the specified milliseconds since January 1, 1970.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+   
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                      JS Date Formats
+                  </button>
+              </h2>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><strong>toDateString()</strong> - Returns a date as a string (e.g., "Sat Nov 24 2024").</li>
+                          <li><strong>toISOString()</strong> - Returns a string in ISO format (e.g., "2024-11-24T14:45:00.000Z").</li>
+                          <li><strong>toLocaleDateString()</strong> - Returns a string representing the date in the local format.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+     
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEight">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                      JS Date Get Methods
+                  </button>
+              </h2>
+              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><strong>getFullYear()</strong> - Returns the year of a date.</li>
+                          <li><strong>getMonth()</strong> - Returns the month (0-11) of a date.</li>
+                          <li><strong>getDate()</strong> - Returns the day of the month (1-31).</li>
+                          <li><strong>getDay()</strong> - Returns the day of the week (0-6).</li>
+                          <li><strong>getHours()</strong> - Returns the hours (0-23).</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+    
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                      JS Date Set Methods
+                  </button>
+              </h2>
+              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><strong>setFullYear()</strong> - Sets the year of a date.</li>
+                          <li><strong>setMonth()</strong> - Sets the month of a date (0-11).</li>
+                          <li><strong>setDate()</strong> - Sets the day of the month of a date.</li>
+                          <li><strong>setHours()</strong> - Sets the hours of a date (0-23).</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+        
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                      JS Math
+                  </button>
+              </h2>
+              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><strong>Math.max()</strong> - Returns the largest number from a list of numbers.</li>
+                          <li><strong>Math.min()</strong> - Returns the smallest number from a list of numbers.</li>
+                          <li><strong>Math.random()</strong> - Returns a random number between 0 and 1.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+    
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingEleven">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                      JS Random
+                  </button>
+              </h2>
+              <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <p><strong>Math.random()</strong> - Generates a random floating-point number between 0 (inclusive) and 1 (exclusive). You can use it to create random numbers within any desired range.</p>
+                  </div>
+              </div>
+          </div>
+
+    
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwelve">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                      JS Booleans
+                  </button>
+              </h2>
+              <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <p><strong>Booleans</strong> are logical data types that can only be either <code>true</code> or <code>false</code>. They are often used in control flow statements like conditionals and loops.</p>
+                  </div>
+              </div>
+          </div>
+
+      
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThirteen">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                      JS Comparisons
+                  </button>
+              </h2>
+              <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <ul>
+                          <li><strong>==</strong> - Compares two values for equality (without considering data type).</li>
+                          <li><strong>===</strong> - Compares two values for equality, considering data type.</li>
+                          <li><strong>!=</strong> - Checks if two values are not equal (without considering data type).</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+         
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFourteen">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                      JS If Else
+                  </button>
+              </h2>
+              <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <p>The <strong>if else</strong> statement is used to execute code based on a condition. The structure looks like:</p>
+                      <pre><code>if (condition) {
+// code to execute if condition is true
+} else {
+// code to execute if condition is false
+}</code></pre>
+                  </div>
+              </div>
+          </div>
+
+         
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFifteen">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                      JS Switch
+                  </button>
+              </h2>
+              <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <p>The <strong>switch</strong> statement evaluates an expression and executes the block of code corresponding to the matched case.</p>
+                      <pre><code>switch (expression) {
+case value1:
+  // code to execute if expression matches value1
+  break;
+case value2:
+  // code to execute if expression matches value2
+  break;
+default:
+  // code to execute if no case matches
+}</code></pre>
+                  </div>
+              </div>
+          </div>
+
+      
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSixteen">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                      JS Loop For
+                  </button>
+              </h2>
+              <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                      <p>The <strong>for</strong> loop is used to execute a block of code a specific number of times. It includes an initialization, condition, and increment expression:</p>
+                      <pre><code>for (let i = 0; i < 5; i++) {
+// code to be executed
+}</code></pre>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
 
 
 
