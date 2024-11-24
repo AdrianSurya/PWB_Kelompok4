@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Bootstrap</title>
+  <title>Adrian</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -37,304 +37,289 @@
     </div>
   </nav>
 
-  <div class="container my-5">
-    <div class="container mt-5">
-      <h1 class="text-center mb-4">JavaScript Methods and Concepts</h1>
+  <div class="container mt-5">
+    <div class="mb-4">
+        <h3>1. JS Array Methods</h3>
+        <p>JavaScript menyediakan banyak metode untuk memanipulasi array, seperti menambah, menghapus, atau menggabungkan elemen.</p>
+        <p>Beberapa metode umum yang dibahas adalah:</p>
+        <ul>
+            <li><strong>push()</strong>: Menambahkan elemen ke akhir array.</li>
+            <li><strong>pop()</strong>: Menghapus elemen terakhir dari array.</li>
+            <li><strong>shift()</strong>: Menghapus elemen pertama dari array.</li>
+            <li><strong>unshift()</strong>: Menambahkan elemen ke awal array.</li>
+            <li><strong>concat()</strong>: Menggabungkan dua array.</li>
+            <li><strong>slice()</strong>: Mengambil bagian dari array tanpa mengubah array asli.</li>
+            <li><strong>splice()</strong>: Mengubah array dengan menambahkan atau menghapus elemen.</li>
+            <li><strong>forEach()</strong>: Menjalankan fungsi untuk setiap elemen dalam array.</li>
+            <li><strong>map()</strong>: Membuat array baru dengan hasil dari fungsi yang dijalankan pada setiap elemen.</li>
+            <li><strong>filter()</strong>: Membuat array baru dengan elemen yang memenuhi kondisi tertentu.</li>
+            <li><strong>reduce()</strong>: Mengurangi array menjadi satu nilai dengan menjalankan fungsi pada setiap elemen.</li>
+        </ul>
+        <h5>Contoh:</h5>
+        <pre><code>
+let arr = [1, 2, 3];
+arr.push(4);  // Menambahkan elemen 4 di akhir array
+console.log(arr);  // Output: [1, 2, 3, 4]
 
-      <div class="accordion" id="accordionExample">
-     
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      JS Arrays Methods
-                  </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <ul>
-                          <li><strong>push()</strong> - Adds one or more elements to the end of an array.</li>
-                          <li><strong>pop()</strong> - Removes the last element from an array.</li>
-                          <li><strong>shift()</strong> - Removes the first element from an array.</li>
-                          <li><strong>unshift()</strong> - Adds one or more elements to the beginning of an array.</li>
-                          <li><strong>concat()</strong> - Merges two or more arrays into one.</li>
-                          <li><strong>join()</strong> - Joins all elements of an array into a string.</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+arr.pop();  // Menghapus elemen terakhir
+console.log(arr);  // Output: [1, 2, 3]
+        </code></pre>
+    </div>
+
+    <div class="mb-4">
+        <h3>2. JS Arrays Search</h3>
+        <p>Metode pencarian dalam array yang ada di W3Schools antara lain:</p>
+        <ul>
+            <li><strong>indexOf()</strong>: Menemukan indeks pertama dari elemen yang dicari.</li>
+            <li><strong>includes()</strong>: Mengecek apakah suatu elemen ada di dalam array.</li>
+            <li><strong>find()</strong>: Menemukan elemen pertama yang memenuhi kondisi.</li>
+            <li><strong>findIndex()</strong>: Menemukan indeks pertama dari elemen yang memenuhi kondisi.</li>
+        </ul>
+        <h5>Contoh:</h5>
+        <pre><code>
+let arr = [10, 20, 30];
+let index = arr.indexOf(20);  // Menemukan indeks 20
+console.log(index);  // Output: 1
+
+let exists = arr.includes(30);  // Mengecek apakah 30 ada di array
+console.log(exists);  // Output: true
+        </code></pre>
+    </div>
+
+
+    <div class="mb-4">
+        <h3>3. JS Array Sort</h3>
+        <p>W3Schools menjelaskan bagaimana cara menyortir array:</p>
+        <ul>
+            <li><strong>sort()</strong>: Menyortir array. Secara default, <code>sort()</code> menyortir elemen sebagai string.</li>
+            <li><strong>sort() dengan fungsi kustom</strong>: Untuk mengurutkan angka dengan benar, gunakan fungsi pembanding.</li>
+        </ul>
+        <h5>Contoh:</h5>
+        <pre><code>
+let arr = [3, 1, 2];
+arr.sort();  // Menyortir array sebagai string
+console.log(arr);  // Output: [1, 2, 3]
+
+arr.sort((a, b) => a - b);  // Mengurutkan secara numerik
+console.log(arr);  // Output: [1, 2, 3]
+        </code></pre>
+    </div>
+
+
+    <div class="mb-4">
+        <h3>4. JS Array Iteration</h3>
+        <p>W3Schools juga mengajarkan cara iterasi array menggunakan berbagai metode:</p>
+        <ul>
+            <li><strong>for loop</strong>: Loop standar untuk mengakses setiap elemen array.</li>
+            <li><strong>forEach()</strong>: Metode untuk iterasi setiap elemen dengan menjalankan fungsi tertentu.</li>
+        </ul>
+        <h5>Contoh:</h5>
+        <pre><code>
+let arr = [1, 2, 3];
+arr.forEach(function(item) {
+console.log(item);  // Output: 1, 2, 3
+});
+
+for (let i = 0; i < arr.length; i++) {
+console.log(arr[i]);  // Output: 1, 2, 3
+}
+        </code></pre>
+    </div>
+
+    <div class="mb-4">
+        <h3>5. JS Array Const</h3>
+        <p>Di W3Schools, dijelaskan bahwa meskipun Anda dapat mendeklarasikan array menggunakan <code>const</code>, Anda masih bisa mengubah isi array (seperti menambah atau menghapus elemen), tetapi Anda tidak bisa mengubah referensi array itu sendiri.</p>
+        <h5>Contoh:</h5>
+        <pre><code>
+const arr = [1, 2, 3];
+arr.push(4);  // Menambahkan elemen ke array
+console.log(arr);  // Output: [1, 2, 3, 4]
+// arr = [5, 6, 7]; // Error: Assignment to constant variable.
+        </code></pre>
+    </div>
 
  
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      JS Arrays Search
-                  </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <ul>
-                          <li><strong>indexOf()</strong> - Returns the first index of a given element in an array.</li>
-                          <li><strong>lastIndexOf()</strong> - Returns the last index of a given element in an array.</li>
-                          <li><strong>includes()</strong> - Checks if an array contains a specific element.</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+    <div class="mb-4">
+        <h3>6. JS Dates</h3>
+        <p>Tanggal di JavaScript dikelola dengan objek <code>Date</code>. Anda bisa membuat objek tanggal dengan:</p>
+        <ul>
+            <li><strong>new Date()</strong>: Membuat objek tanggal untuk waktu saat ini.</li>
+            <li><strong>new Date('YYYY-MM-DD')</strong>: Membuat objek tanggal untuk tanggal tertentu.</li>
+        </ul>
+        <h5>Contoh:</h5>
+        <pre><code>
+let date = new Date();
+console.log(date);  // Output: Tanggal dan waktu saat ini
 
-   
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      JS Array Sort
-                  </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <ul>
-                          <li><strong>sort()</strong> - Sorts the elements of an array in place.</li>
-                          <li><strong>reverse()</strong> - Reverses the order of the elements in an array.</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+let specificDate = new Date('2024-12-25');
+console.log(specificDate);  // Output: Wed Dec 25 2024
+        </code></pre>
+    </div>
 
-   
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      JS Array Iteration
-                  </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <ul>
-                          <li><strong>forEach()</strong> - Executes a provided function once for each array element.</li>
-                          <li><strong>map()</strong> - Creates a new array with the results of calling a function for every array element.</li>
-                          <li><strong>filter()</strong> - Creates a new array with all elements that pass the test implemented by the provided function.</li>
-                          <li><strong>reduce()</strong> - Applies a function against an accumulator and each element to reduce it to a single value.</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+ 
+    <div class="mb-4">
+        <h3>7. JS Date Formats</h3>
+        <p>W3Schools menjelaskan beberapa format tanggal yang dapat digunakan:</p>
+        <ul>
+            <li><strong>toISOString()</strong>: Format standar internasional.</li>
+            <li><strong>toLocaleString()</strong>: Format sesuai dengan pengaturan lokal.</li>
+            <li><strong>toUTCString()</strong>: Format tanggal dalam waktu UTC.</li>
+        </ul>
+        <h5>Contoh:</h5>
+        <pre><code>
+let date = new Date();
+console.log(date.toISOString());  // Output: 2024-11-24T00:00:00.000Z
+console.log(date.toLocaleString());  // Output: format lokal, misalnya "11/24/2024, 12:00:00 AM"
+        </code></pre>
+    </div>
 
-    
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                      JS Array Const
-                  </button>
-              </h2>
-              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <p>In JavaScript, arrays declared with <strong>const</strong> cannot be reassigned, but the elements within the array can be modified.</p>
-                  </div>
-              </div>
-          </div>
 
-    
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSix">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                      JS Dates
-                  </button>
-              </h2>
-              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <ul>
-                          <li><strong>new Date()</strong> - Returns the current date and time.</li>
-                          <li><strong>Date.now()</strong> - Returns the number of milliseconds elapsed since January 1, 1970.</li>
-                          <li><strong>new Date(milliseconds)</strong> - Returns a date object from the specified milliseconds since January 1, 1970.</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+    <div class="mb-4">
+        <h3>8. JS Date Get Methods</h3>
+        <p>Metode untuk mengambil komponen dari objek <code>Date</code>:</p>
+        <ul>
+            <li><strong>getFullYear()</strong>: Mengambil tahun.</li>
+            <li><strong>getMonth()</strong>: Mengambil bulan (0-11).</li>
+            <li><strong>getDate()</strong>: Mengambil tanggal (1-31).</li>
+            <li><strong>getDay()</strong>: Mengambil hari dalam seminggu (0-6).</li>
+            <li><strong>getHours(), getMinutes(), getSeconds()</strong>: Mengambil jam, menit, dan detik.</li>
+        </ul>
+        <h5>Contoh:</h5>
+        <pre><code>
+let date = new Date();
+console.log(date.getFullYear());  // Output: 2024
+console.log(date.getMonth());     // Output: 10 (November)
+console.log(date.getDate());      // Output: 24
+        </code></pre>
+    </div>
 
-   
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSeven">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                      JS Date Formats
-                  </button>
-              </h2>
-              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <ul>
-                          <li><strong>toDateString()</strong> - Returns a date as a string (e.g., "Sat Nov 24 2024").</li>
-                          <li><strong>toISOString()</strong> - Returns a string in ISO format (e.g., "2024-11-24T14:45:00.000Z").</li>
-                          <li><strong>toLocaleDateString()</strong> - Returns a string representing the date in the local format.</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+    <div class="mb-4">
+        <h3>9. JS Date Set Methods</h3>
+        <p>Metode untuk mengubah komponen tanggal:</p>
+        <ul>
+            <li><strong>setFullYear()</strong>: Mengubah tahun.</li>
+            <li><strong>setMonth()</strong>: Mengubah bulan.</li>
+            <li><strong>setDate()</strong>: Mengubah tanggal.</li>
+            <li><strong>setHours(), setMinutes(), setSeconds()</strong>: Mengubah jam, menit, dan detik.</li>
+        </ul>
+        <h5>Contoh:</h5>
+        <pre><code>
+let date = new Date();
+date.setFullYear(2025);
+console.log(date.getFullYear());  // Output: 2025
+        </code></pre>
+    </div>
 
-     
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingEight">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                      JS Date Get Methods
-                  </button>
-              </h2>
-              <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <ul>
-                          <li><strong>getFullYear()</strong> - Returns the year of a date.</li>
-                          <li><strong>getMonth()</strong> - Returns the month (0-11) of a date.</li>
-                          <li><strong>getDate()</strong> - Returns the day of the month (1-31).</li>
-                          <li><strong>getDay()</strong> - Returns the day of the week (0-6).</li>
-                          <li><strong>getHours()</strong> - Returns the hours (0-23).</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+ 
+    <div class="mb-4">
+        <h3>10. JS Math</h3>
+        <p>W3Schools menjelaskan penggunaan objek <code>Math</code> dalam JavaScript:</p>
+        <ul>
+            <li><strong>Math.max()</strong>: Mengembalikan nilai terbesar dari sekumpulan angka.</li>
+            <li><strong>Math.min()</strong>: Mengembalikan nilai terkecil dari sekumpulan angka.</li>
+            <li><strong>Math.random()</strong>: Menghasilkan angka acak antara 0 dan 1.</li>
+            <li><strong>Math.abs()</strong>: Mengembalikan nilai absolut.</li>
+            <li><strong>Math.round()</strong>: Membulatkan angka ke bilangan bulat terdekat.</li>
+            <li><strong>Math.floor()</strong>: Membulatkan angka ke bawah.</li>
+            <li><strong>Math.ceil()</strong>: Membulatkan angka ke atas.</li>
+        </ul>
+        <h5>Contoh:</h5>
+        <pre><code>
+console.log(Math.max(1, 2, 3));  // Output: 3
+console.log(Math.random());      // Output: Angka acak antara 0 dan 1
+console.log(Math.abs(-5));       // Output: 5
+        </code></pre>
+    </div>
+
+
+    <div class="mb-4">
+        <h3>11. JS Random</h3>
+        <p>Metode <code>Math.random()</code> digunakan untuk menghasilkan angka acak antara 0 dan 1 (tidak termasuk 1).</p>
+        <h5>Contoh:</h5>
+        <pre><code>
+let randomValue = Math.random();  // menghasilkan angka acak
+console.log(randomValue);  // Output: Angka acak antara 0 dan 1
+        </code></pre>
+    </div>
 
     
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingNine">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                      JS Date Set Methods
-                  </button>
-              </h2>
-              <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <ul>
-                          <li><strong>setFullYear()</strong> - Sets the year of a date.</li>
-                          <li><strong>setMonth()</strong> - Sets the month of a date (0-11).</li>
-                          <li><strong>setDate()</strong> - Sets the day of the month of a date.</li>
-                          <li><strong>setHours()</strong> - Sets the hours of a date (0-23).</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+    <div class="mb-4">
+        <h3>12. JS Booleans</h3>
+        <p>Tipe data Boolean memiliki dua nilai: <code>true</code> dan <code>false</code>.</p>
+        <h5>Contoh:</h5>
+        <pre><code>
+let isTrue = true;
+let isFalse = false;
+console.log(isTrue);  // Output: true
+console.log(isFalse); // Output: false
+        </code></pre>
+    </div>
 
-        
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTen">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                      JS Math
-                  </button>
-              </h2>
-              <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <ul>
-                          <li><strong>Math.max()</strong> - Returns the largest number from a list of numbers.</li>
-                          <li><strong>Math.min()</strong> - Returns the smallest number from a list of numbers.</li>
-                          <li><strong>Math.random()</strong> - Returns a random number between 0 and 1.</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
+  
+    <div class="mb-4">
+        <h3>13. JS Comparisons</h3>
+        <p>Perbandingan dalam JavaScript menggunakan operator:</p>
+        <ul>
+            <li><strong>==</strong> (Loose equality): Membandingkan nilai setelah konversi tipe.</li>
+            <li><strong>===</strong> (Strict equality): Membandingkan nilai dan tipe data secara ketat.</li>
+            <li><strong>!=, !==</strong>: Operasi perbandingan untuk tidak sama.</li>
+        </ul>
+        <h5>Contoh:</h5>
+        <pre><code>
+console.log(5 == '5');  // Output: true (loose equality)
+console.log(5 === '5');  // Output: false (strict equality)
+        </code></pre>
+    </div>
 
-    
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingEleven">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                      JS Random
-                  </button>
-              </h2>
-              <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <p><strong>Math.random()</strong> - Generates a random floating-point number between 0 (inclusive) and 1 (exclusive). You can use it to create random numbers within any desired range.</p>
-                  </div>
-              </div>
-          </div>
-
-    
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwelve">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-                      JS Booleans
-                  </button>
-              </h2>
-              <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <p><strong>Booleans</strong> are logical data types that can only be either <code>true</code> or <code>false</code>. They are often used in control flow statements like conditionals and loops.</p>
-                  </div>
-              </div>
-          </div>
-
-      
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThirteen">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
-                      JS Comparisons
-                  </button>
-              </h2>
-              <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <ul>
-                          <li><strong>==</strong> - Compares two values for equality (without considering data type).</li>
-                          <li><strong>===</strong> - Compares two values for equality, considering data type.</li>
-                          <li><strong>!=</strong> - Checks if two values are not equal (without considering data type).</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-
-         
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFourteen">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
-                      JS If Else
-                  </button>
-              </h2>
-              <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <p>The <strong>if else</strong> statement is used to execute code based on a condition. The structure looks like:</p>
-                      <pre><code>if (condition) {
-// code to execute if condition is true
+ 
+    <div class="mb-4">
+        <h3>14. JS If Else</h3>
+        <p><code>if-else</code> adalah cara untuk mengontrol alur eksekusi kode berdasarkan kondisi tertentu.</p>
+        <h5>Contoh:</h5>
+        <pre><code>
+let x = 10;
+if (x > 10) {
+console.log("X lebih besar dari 10");
 } else {
-// code to execute if condition is false
-}</code></pre>
-                  </div>
-              </div>
-          </div>
+console.log("X kurang dari atau sama dengan 10");
+}  // Output: "X kurang dari atau sama dengan 10"
+        </code></pre>
+    </div>
 
-         
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFifteen">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
-                      JS Switch
-                  </button>
-              </h2>
-              <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <p>The <strong>switch</strong> statement evaluates an expression and executes the block of code corresponding to the matched case.</p>
-                      <pre><code>switch (expression) {
-case value1:
-  // code to execute if expression matches value1
-  break;
-case value2:
-  // code to execute if expression matches value2
-  break;
+
+    <div class="mb-4">
+        <h3>15. JS Switch</h3>
+        <p>Pernyataan <code>switch</code> digunakan untuk membandingkan nilai dengan banyak kondisi.</p>
+        <h5>Contoh:</h5>
+        <pre><code>
+let x = 2;
+switch (x) {
+case 1:
+console.log("Satu");
+break;
+case 2:
+console.log("Dua");
+break;
 default:
-  // code to execute if no case matches
-}</code></pre>
-                  </div>
-              </div>
-          </div>
+console.log("Nilai tidak dikenal");
+}  // Output: "Dua"
+        </code></pre>
+    </div>
 
-      
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSixteen">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
-                      JS Loop For
-                  </button>
-              </h2>
-              <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                      <p>The <strong>for</strong> loop is used to execute a block of code a specific number of times. It includes an initialization, condition, and increment expression:</p>
-                      <pre><code>for (let i = 0; i < 5; i++) {
-// code to be executed
-}</code></pre>
-                  </div>
-              </div>
-          </div>
-
-      </div>
-  </div>
-
-
-
+ 
+    <div class="mb-4">
+        <h3>16. JS Loop For</h3>
+        <p>Loop <code>for</code> digunakan untuk iterasi kode sebanyak jumlah yang ditentukan.</p>
+        <h5>Contoh:</h5>
+        <pre><code>
+for (let i = 0; i < 5; i++) {
+console.log(i);  // Output: 0, 1, 2, 3, 4
+}
+        </code></pre>
+    </div>
+</div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
